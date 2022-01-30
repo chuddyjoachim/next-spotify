@@ -28,7 +28,6 @@ const Center = () => {
   const playlistId = useRecoilValue(playlistIdState)
   const [playlist, setPlaylist] = useRecoilState<any>(playlistState)
 
-  console.log({ playlistId })
 
   React.useEffect(() => {
     setColor(() => {
@@ -43,11 +42,9 @@ const Center = () => {
         setPlaylist(data.body)
       })
       .catch((err) => {
-        console.log(err)
       })
   }, [spotifyApi, playlistId])
 
-  console.log({ playlist })
 
   return (
     <>

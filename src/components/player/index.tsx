@@ -33,7 +33,6 @@ const Player = () => {
   const fetchCurrentSongs = () => {
     if (!songInfo) {
       spotifyApi.getMyCurrentPlayingTrack().then((data) => {
-        console.log('Now Playing', data.body?.item)
         setCurrentTrackid(data.body?.item?.id)
 
         spotifyApi.getMyCurrentPlaybackState().then((data) => {
@@ -73,7 +72,6 @@ const Player = () => {
   const debouncedAdjustVolume = React.useCallback(
     debounce((volume) => {
       spotifyApi.setVolume(volume).catch((err) => {
-        console.log(err)
       })
     }, 500),
     []
