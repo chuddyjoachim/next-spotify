@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="h-screen overflow-hidden bg-black">
       <Head>
-        <title>Create Next App</title>
+        <title>Next Spotify clone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
